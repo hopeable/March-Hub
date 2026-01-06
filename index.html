@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARCH HUB | Premium Senator Wears</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .needle-logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #111111;
+            letter-spacing: -1px;
+        }
+        .needle-container {
+            width: 12px;
+            height: 40px;
+            position: relative;
+            margin: 0 4px;
+        }
+        .needle-gold {
+            fill: #D4AF37;
+        }
+        .senator-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .senator-card:hover .btn-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .filter-btn.active {
+            color: #d97706; /* amber-600 */
+            border-bottom: 2px solid #d97706;
+        }
+        .grid-item-hidden {
+            display: none;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+<body class="text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="needle-logo">
+                    M
+                    <div class="needle-container">
+                        <svg viewBox="0 0 10 40" class="w-full h-full">
+                            <path class="needle-gold" d="M5 2 C3.5 2 2.5 3 2.5 4.5 C2.5 6 3.5 7 5 7 C6.5 7 7.5 6 7.5 4.5 C7.5 3 6.5 2 5 2 M4.5 8 L4.5 38 L5.5 38 L5.5 8 Z" />
+                            <circle cx="5" cy="4.5" r="1" fill="white" />
+                        </svg>
+                    </div>
+                    H
+                    <span class="ml-3 text-xs tracking-[0.4em] font-light uppercase hidden sm:block">March Hub</span>
+                </a>
+                
+                <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest">
+                    <a href="#home" class="hover:text-amber-600 transition">Home</a>
+                    <a href="#senator-collection" class="hover:text-amber-600 transition">Senator Collection</a>
+                    <a href="#about" class="hover:text-amber-600 transition">Our Craft</a>
+                    <a href="#contact" class="hover:text-amber-600 transition">Contact</a>
+                </div>
+
+                <button onclick="orderWhatsApp('General Inquiry')" class="bg-black text-white px-5 py-2 rounded text-xs font-bold hover:bg-amber-600 transition">
+                    ORDER NOW
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="relative min-h-[90vh] flex items-center pt-32 pb-20 px-4 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1">
+                <span class="inline-block px-4 py-1 border border-amber-600 text-amber-600 text-[10px] font-bold tracking-[0.3em] uppercase mb-6">Master Tailors of Ilorin</span>
+                <h1 class="text-6xl md:text-7xl font-bold leading-tight mb-6">The Art of <span class="italic text-amber-600">Senator</span> Wears.</h1>
+                <p class="text-slate-500 text-lg mb-10 max-w-lg leading-relaxed">
+                    At MARCH HUB, we engineer confidence. Explore our bespoke collection of authentic Nigerian Senator suits, crafted with surgical precision.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#senator-collection" class="bg-black text-white px-8 py-4 rounded-sm text-sm font-bold uppercase tracking-widest hover:bg-amber-600 transition">View Gallery</a>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 relative">
+                <div class="aspect-[4/5] bg-slate-100 rounded-lg overflow-hidden relative shadow-2xl">
+                    <img src="https://i.pinimg.com/1200x/f3/f2/bc/f3f2bcd64b0984ebfbd98e7924ba0baf.jpg" alt="March Hub Featured New Arrival" class="w-full h-full object-cover">
+                    <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur p-6 rounded shadow-lg max-w-[220px]">
+                        <p class="text-[10px] uppercase tracking-widest font-bold text-amber-600 mb-1">New Arrival</p>
+                        <p class="text-sm font-bold">The Presidential Signature Style</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Senator Collection -->
+    <section id="senator-collection" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <h2 class="text-4xl font-bold mb-2">Senator Collection</h2>
+                    <p class="text-slate-500">Premium native styles for every occasion. Select a category to filter.</p>
+                </div>
+                <div class="flex flex-wrap gap-6 text-xs font-bold uppercase tracking-widest">
+                    <button class="filter-btn active pb-1 transition-all" data-filter="all">All Styles</button>
+                    <button class="filter-btn pb-1 text-slate-400 hover:text-black transition-all" data-filter="long-sleeve">Long Sleeve</button>
+                    <button class="filter-btn pb-1 text-slate-400 hover:text-black transition-all" data-filter="short-sleeve">Short Sleeve</button>
+                    <button class="filter-btn pb-1 text-slate-400 hover:text-black transition-all" data-filter="embroidered">Embroidered</button>
+                </div>
+            </div>
+
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                
+                <!-- Item 1: Executive White -->
+                <div class="senator-card group bg-white p-4 rounded-xl shadow-sm hover:shadow-xl" data-category="short-sleeve">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+                        <img src="https://i.pinimg.com/736x/0b/f6/b5/0bf6b57da11e9f0598dd99ede601a86d.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="btn-overlay absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300">
+                            <button onclick="orderWhatsApp('Executive White Senator')" class="bg-white text-black px-6 py-2 font-bold text-xs tracking-widest uppercase hover:bg-amber-600 hover:text-white transition">Order Style</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-md text-slate-800">Executive White</h3>
+                        <span class="text-amber-600 font-bold italic text-xs">Premium</span>
+                    </div>
+                </div>
+
+                <!-- Item 2: Agbada -->
+                <div class="senator-card group bg-white p-4 rounded-xl shadow-sm hover:shadow-xl" data-category="long-sleeve embroidered">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+                        <img src="https://i.pinimg.com/1200x/8c/42/e6/8c42e611e8c18392d6be461c116ae8da.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="btn-overlay absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300">
+                            <button onclick="orderWhatsApp('Agbada Design')" class="bg-white text-black px-6 py-2 font-bold text-xs tracking-widest uppercase hover:bg-amber-600 hover:text-white transition">Order Style</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-md text-slate-800">Agbada</h3>
+                        <span class="text-amber-600 font-bold italic text-xs">Exclusive</span>
+                    </div>
+                </div>
+
+                <!-- Item 3: Royal Blue -->
+                <div class="senator-card group bg-white p-4 rounded-xl shadow-sm hover:shadow-xl" data-category="long-sleeve">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+                        <img src="https://i.pinimg.com/1200x/c5/9a/83/c59a833cdf6fd52ccb24c95112ae6a05.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="btn-overlay absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300">
+                            <button onclick="orderWhatsApp('Royal Blue Senator')" class="bg-white text-black px-6 py-2 font-bold text-xs tracking-widest uppercase hover:bg-amber-600 hover:text-white transition">Order Style</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-md text-slate-800">Royal Blue</h3>
+                        <span class="text-amber-600 font-bold italic text-xs">Bestseller</span>
+                    </div>
+                </div>
+
+                <!-- Item 4: Baba Alaye (Updated from Signature Neck) -->
+                <div class="senator-card group bg-white p-4 rounded-xl shadow-sm hover:shadow-xl" data-category="embroidered">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+                        <img src="https://i.pinimg.com/1200x/b7/d7/56/b7d756318d0b612ec465741510cc3a04.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="btn-overlay absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300">
+                            <button onclick="orderWhatsApp('Baba Alaye Style')" class="bg-white text-black px-6 py-2 font-bold text-xs tracking-widest uppercase hover:bg-amber-600 hover:text-white transition">Order Style</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-md text-slate-800">Baba Alaye</h3>
+                        <span class="text-amber-600 font-bold italic text-xs">Artisan</span>
+                    </div>
+                </div>
+
+                <!-- Item 5: Summer Senator -->
+                <div class="senator-card group bg-white p-4 rounded-xl shadow-sm hover:shadow-xl" data-category="short-sleeve">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+                        <img src="https://i.pinimg.com/736x/b1/d3/e6/b1d3e6dd0d139a056259958beb8c2df5.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="btn-overlay absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300">
+                            <button onclick="orderWhatsApp('Summer Senator')" class="bg-white text-black px-6 py-2 font-bold text-xs tracking-widest uppercase hover:bg-amber-600 hover:text-white transition">Order Style</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-md text-slate-800">Summer Senator</h3>
+                        <span class="text-slate-400 text-xs uppercase">Premium</span>
+                    </div>
+                </div>
+
+                <!-- Item 6: Midnight Black -->
+                <div class="senator-card group bg-white p-4 rounded-xl shadow-sm hover:shadow-xl" data-category="long-sleeve">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+                        <img src="https://i.pinimg.com/736x/73/81/df/7381dfb1c67324a749e7c7fbbef4f7bc.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="btn-overlay absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300">
+                            <button onclick="orderWhatsApp('Midnight Black Collection')" class="bg-white text-black px-6 py-2 font-bold text-xs tracking-widest uppercase hover:bg-amber-600 hover:text-white transition">Order Style</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-md text-slate-800">Midnight Black</h3>
+                        <span class="text-slate-400 text-xs uppercase">Elegant</span>
+                    </div>
+                </div>
+
+                <!-- Item 7: OSOMO (Updated from Imperial Stitch) -->
+                <div class="senator-card group bg-white p-4 rounded-xl shadow-sm hover:shadow-xl" data-category="embroidered">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+                        <img src="https://i.pinimg.com/736x/16/12/9e/16129e020597b54c180a17917996d7c1.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="btn-overlay absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300">
+                            <button onclick="orderWhatsApp('OSOMO Style')" class="bg-white text-black px-6 py-2 font-bold text-xs tracking-widest uppercase hover:bg-amber-600 hover:text-white transition">Order Style</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-md text-slate-800">OSOMO</h3>
+                        <span class="text-slate-400 text-xs uppercase">Bespoke</span>
+                    </div>
+                </div>
+
+                <!-- Item 8: Owanbe -->
+                <div class="senator-card group bg-white p-4 rounded-xl shadow-sm hover:shadow-xl" data-category="short-sleeve">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+                        <img src="https://i.pinimg.com/736x/dc/44/95/dc44954045fe1686e0803cd17c6229fd.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="btn-overlay absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300">
+                            <button onclick="orderWhatsApp('Owanbe Senator Style')" class="bg-white text-black px-6 py-2 font-bold text-xs tracking-widest uppercase hover:bg-amber-600 hover:text-white transition">Order Style</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-md text-slate-800">Owanbe</h3>
+                        <span class="text-slate-400 text-xs uppercase">Vibrant</span>
+                    </div>
+                </div>
+
+                <!-- Item 9: Traditional Long -->
+                <div class="senator-card group bg-white p-4 rounded-xl shadow-sm hover:shadow-xl" data-category="long-sleeve">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+                        <img src="https://i.pinimg.com/736x/a9/0b/21/a90b21d2e3c1d05ef6cc5949c9b9d49a.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="btn-overlay absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300">
+                            <button onclick="orderWhatsApp('Traditional Long Sleeve')" class="bg-white text-black px-6 py-2 font-bold text-xs tracking-widest uppercase hover:bg-amber-600 hover:text-white transition">Order Style</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-md text-slate-800">Traditional Long</h3>
+                        <span class="text-slate-400 text-xs uppercase">Heritage</span>
+                    </div>
+                </div>
+
+                <!-- Item 10: Heritage Pattern (Updated Image) -->
+                <div class="senator-card group bg-white p-4 rounded-xl shadow-sm hover:shadow-xl" data-category="embroidered">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+                        <img src="https://i.pinimg.com/736x/21/85/0e/21850ebe5f6d87b53f1fca942f1282f1.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="btn-overlay absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300">
+                            <button onclick="orderWhatsApp('Heritage Pattern Style')" class="bg-white text-black px-6 py-2 font-bold text-xs tracking-widest uppercase hover:bg-amber-600 hover:text-white transition">Order Style</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-md text-slate-800">Heritage Pattern</h3>
+                        <span class="text-slate-400 text-xs uppercase">Artisan</span>
+                    </div>
+                </div>
+
+                <!-- Item 11: Buga -->
+                <div class="senator-card group bg-white p-4 rounded-xl shadow-sm hover:shadow-xl" data-category="short-sleeve">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+                        <img src="https://i.pinimg.com/1200x/8d/8b/16/8d8b164f6a49469c6f40b1d497fab9f6.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="btn-overlay absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300">
+                            <button onclick="orderWhatsApp('Buga Style')" class="bg-white text-black px-6 py-2 font-bold text-xs tracking-widest uppercase hover:bg-amber-600 hover:text-white transition">Order Style</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-md text-slate-800">Buga</h3>
+                        <span class="text-slate-400 text-xs uppercase">Bold</span>
+                    </div>
+                </div>
+
+                <!-- Item 12: Gala Long Sleeve -->
+                <div class="senator-card group bg-white p-4 rounded-xl shadow-sm hover:shadow-xl" data-category="long-sleeve">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+                        <img src="https://i.pinimg.com/736x/d7/43/cb/d743cb38b1db6e932a938f6a9b898fea.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="btn-overlay absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300">
+                            <button onclick="orderWhatsApp('Gala Long Sleeve')" class="bg-white text-black px-6 py-2 font-bold text-xs tracking-widest uppercase hover:bg-amber-600 hover:text-white transition">Order Style</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-bold text-md text-slate-800">Gala Long Sleeve</h3>
+                        <span class="text-slate-400 text-xs uppercase">Ceremonial</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Craft -->
+    <section id="about" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="p-8 border-2 border-amber-600/10 rounded-2xl relative">
+                    <img src="https://images.unsplash.com/photo-1594932224828-b4b059b6f6f2?auto=format&fit=crop&q=80&w=800" class="rounded-xl shadow-xl relative z-10">
+                    <div class="absolute -bottom-6 -left-6 bg-black text-white p-8 rounded-xl z-20">
+                        <p class="text-3xl font-bold mb-1">100%</p>
+                        <p class="text-[10px] uppercase tracking-widest opacity-60">Bespoke Tailoring</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-4xl font-bold mb-6">A Needle that Speaks <span class="text-amber-600">Precision.</span></h2>
+                <p class="text-slate-500 leading-relaxed mb-8">
+                    March Hub is Ilorin's definitive fashion house for unisex Senator wears. We understand that a well-tailored outfit is more than just fabric—it's your identity.
+                </p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="p-4 bg-slate-50 rounded-lg">
+                        <h4 class="font-bold mb-2">Perfect Fit</h4>
+                        <p class="text-xs text-slate-400">Custom measurements for every client.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-lg">
+                        <h4 class="font-bold mb-2">Quality</h4>
+                        <p class="text-xs text-slate-400">Premium materials and sharp finish.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-black text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="md:col-span-1">
+                    <a href="#" class="needle-logo !text-white mb-8">
+                        M
+                        <div class="needle-container">
+                            <svg viewBox="0 0 10 40" class="w-full h-full">
+                                <path class="needle-gold" d="M5 2 C3.5 2 2.5 3 2.5 4.5 C2.5 6 3.5 7 5 7 C6.5 7 7.5 6 7.5 4.5 C7.5 3 6.5 2 5 2 M4.5 8 L4.5 38 L5.5 38 L5.5 8 Z" />
+                                <circle cx="5" cy="4.5" r="1" fill="white" />
+                            </svg>
+                        </div>
+                        H
+                    </a>
+                    <div class="flex gap-4">
+                        <a href="https://tiktok.com/@MARCHHUB122" target="_blank" class="w-10 h-10 border border-slate-800 flex items-center justify-center rounded-full hover:bg-amber-600 transition"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://instagram.com/MARCHHUB12" target="_blank" class="w-10 h-10 border border-slate-800 flex items-center justify-center rounded-full hover:bg-amber-600 transition"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-amber-600 mb-8">Workshop</h4>
+                    <p class="text-slate-400 text-sm">
+                        AL-SALAM BLOCK INDUSTRY<br>
+                        OKE ANDI SANGO<br>
+                        ILORIN, KWARA STATE
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-amber-600 mb-8">Hotlines</h4>
+                    <div class="space-y-3 text-sm">
+                        <a href="tel:08136383104" class="block text-slate-400 hover:text-white transition">0813 638 3104</a>
+                        <a href="tel:09065832345" class="block text-slate-400 hover:text-white transition">0906 583 2345</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-amber-600 mb-8">Orders</h4>
+                    <button onclick="orderWhatsApp('General Consultation')" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded text-[10px] font-bold uppercase tracking-widest flex items-center gap-3 transition">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        Chat Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-900 pt-12 text-center">
+                <p class="text-[10px] text-slate-600 uppercase tracking-[0.4em]">&copy; 2024 MARCH HUB FASHION HOUSE.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed WA Button -->
+    <div class="fixed bottom-6 right-6 z-[60] group">
+        <button onclick="orderWhatsApp('General Inquiry')" class="bg-green-500 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:scale-110 active:scale-95 transition-all">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+    </div>
+
+    <script>
+        function orderWhatsApp(itemName) {
+            const phoneNumber = "2348136383104";
+            const message = encodeURIComponent(`Hello March Hub! I'm interested in the "${itemName}" style from your website. Can you tell me more about it?`);
+            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+        }
+
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.senator-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('active', 'text-amber-600');
+                    b.classList.add('text-slate-400');
+                });
+                btn.classList.add('active', 'text-amber-600');
+                btn.classList.remove('text-slate-400');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    const categories = item.getAttribute('data-category').split(' ');
+                    
+                    if (filterValue === 'all' || categories.includes(filterValue)) {
+                        item.classList.remove('grid-item-hidden');
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.9)';
+                        setTimeout(() => {
+                            item.classList.add('grid-item-hidden');
+                        }, 400);
+                    }
+                });
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.senator-card').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
